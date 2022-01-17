@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid suite</title>
+</head>
+<body>
+    <div class="grid">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem at quo voluptate voluptatem obcaecati tempora minus. Velit in maxime vitae!</p>
+        <p>Eius consectetur in, nesciunt incidunt nam excepturi et accusantium, sed quasi cupiditate, repellendus dignissimos accusamus. Repudiandae reiciendis mollitia autem sunt?</p>
+        <p>Eligendi eaque culpa quis dignissimos delectus inventore facilis in et porro debitis id, autem vero dolorum quaerat voluptatem doloribus iusto?</p>
+        <p>Assumenda eveniet officiis quia alias nisi itaque saepe dolor maiores et ex. Quis dolorum omnis quasi doloribus ad impedit facere?</p>
+        <p>Eos temporibus ut dolore repellat natus nesciunt adipisci, quia ullam voluptate omnis corrupti hic officia est odio, veritatis mollitia nostrum.</p>
+        <p>Quasi, itaque nemo? Quos aut, tempora modi eos vitae ad accusamus provident eum consectetur ullam accusantium perferendis corporis blanditiis expedita?</p>
+        <p>Eligendi quasi libero odio deleniti porro, atque quod, amet laboriosam debitis iure quaerat sapiente architecto saepe est error hic. Atque.</p>
+    </div>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap:30px; 
+        }
+        @media (min-width:600px) {
+            .grid{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (min-width:900px) {
+            .grid{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        p{
+            border:2px solid purple;
+            padding:10px;
+            margin: 0;
+        }
+    </style>
+</body>
+</html>

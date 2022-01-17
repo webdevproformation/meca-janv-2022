@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>display grid</h1>
+    <p>règle css qui permet de faire des mises en page en deux dimensions : largeur // hauteur</p>
+    <h2>exemple1 - avec flex</h2>
+    <!-- section.flex>article*3>(h2>lorem2)+p>lorem10 -->
+    <section class="flex">
+        <article>
+            <h2>Lorem, ipsum.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, porro? </p>
+        </article>
+        <article>
+            <h2>Aut, labore?</h2>
+            <p>Eveniet iusto iste porro labore officiis quod unde illum error. </p>
+        </article>
+        <article>
+            <h2>Neque, temporibus.</h2>
+            <p>Sequi rem voluptates, cum voluptas dicta officiis aliquam architecto veniam? </p>
+        </article>
+    </section>
+    <style>
+        /* mettre les 3 articles l'un à côté de l'autre */
+        .flex{
+            display: flex;
+            justify-content: space-between;
+        }
+        .flex article{
+           border:2px solid black;
+           width: 33.33%; 
+           box-sizing: border-box;
+        }
+       /*  .flex article {
+            margin-left: 10px;
+            background: red;
+        }
+        .flex article:first-child{
+            margin-left: 0;
+        } */
+        .flex > article + article{
+            margin-left: 10px;
+        }
+
+    </style>
+    <hr>
+    <h2>exemple1 - avec grid</h2>
+    <section class="grid">
+        <article>
+            <h2>Lorem, ipsum.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, eos.</p>
+        </article>
+        <article>
+            <h2>Consequuntur, exercitationem.</h2>
+            <p>Nisi molestiae quas enim itaque quo ad fugit beatae explicabo.</p>
+        </article>
+        <article>
+            <h2>Laborum, nihil?</h2>
+            <p>Dignissimos commodi saepe voluptatem expedita error? Tenetur provident eveniet quod?</p>
+        </article>
+    </section>
+    <style>
+        .grid{
+            border:2px solid red;
+            display: grid; /* sélectionner les balises enfant directes de .grid => article */
+            grid-template-columns: 2fr 1fr 1fr;
+            /* combien de colonnes à cette grille ?? 
+                3 colonnes  d'une largeur de 1fr => unité qui n'existe QUE si l'élément est en display grid !!! 
+                fr => fraction => unité relative qui va prendre les espaces avant d'être calculé
+                1200px - 10px - 10px - 6 * 2px = 1168 px / 4
+                1fr = 389,333px
+                1fr avec 100% 
+            */
+            gap:10px;
+        }
+        .grid article{
+            border:2px solid black;
+        }
+    </style>
+
+    
+
+
+
+
+</body>
+</html>

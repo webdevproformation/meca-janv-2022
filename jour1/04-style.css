@@ -1,0 +1,173 @@
+/*
+https://tailwindcss.com/
+reset => remise à zéro
+*/
+body, h1, p , figure{
+    margin: 0;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+class utilitaires 
+*/
+img{
+    max-width: 100%; /* images doivent avoir comme largeur max la largeur de leur parent*/
+}
+
+.container{
+    max-width: 1200px;
+    width:100%;
+    margin: 0 auto; /*m0-a centrer mon container*/
+    padding: 0 20px;
+    box-sizing: border-box;
+    /* w120
+    p450
+    h500
+    bdrs20 */
+}
+
+body{
+    font-family: sans-serif; /*ffss*/
+}
+/* ... */
+/*
+variable de couleur de css 
+$variable => sass $beige : #b3a79e ; 
+*/
+:root{
+    --beige : #b3a79e;
+    --rose : #f64b3c; 
+    --largeur : 20px;
+    --bordure : 2px solid var(--beige);
+}
+
+/*
+ block header
+*/
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
+.header__titre{
+    background: var(--beige);
+    padding: 5px ;
+    /* j'utilise le moins possible la propriété width et height */
+    margin: 10px 0;
+}
+
+.header__menu{ /*Block __ Element -- Modifier*/
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background: var(--rose);
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+@media (min-width:700px) {
+    .header__titre{
+        order:1;
+        margin-bottom: 10px;
+    }
+    .header__menu{
+        order:0;
+        margin-bottom: 0px;
+    }
+}
+
+.header__item{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    border:1px solid black;
+}
+
+@media (min-width:500px) {
+    .header__item{
+        /*width:calc(50% - 2px);*/
+        width:50%;
+        
+    }
+}
+
+.header__item--sm{
+    width:25%;
+    padding: 10px 0;
+    font-size: 25px;
+    border:1px solid black;
+    box-sizing: border-box;
+}
+
+/*
+block main
+*/
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width:700px) {
+    .main__section{
+        order:1;
+    }
+    .main__hero{
+        order:0;
+    }
+}
+
+.main__section{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main__article{
+    width: 100%;
+}
+
+@media (min-width:500px) {
+    .main__article{
+        width: calc(50% - 10px);
+    }
+    .main__article:last-child{
+        display: none;
+    }
+}
+
+@media (min-width:700px) {
+    .main__article{
+        width: 32.5%;
+    }
+    .main__article:last-child{
+        display: block;
+    }
+}
+
+.main__articleP{
+    margin: 20px 0;
+}
+
+.main__heroImg{
+    border:20px solid var(--beige);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/*
+block footer
+*/
+
+.footer__copy{
+    padding: 10px 0;
+    background: var(--beige);
+    text-align: center;
+    margin-bottom: 10px;
+}

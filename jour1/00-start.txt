@@ -1,0 +1,31 @@
+https://formation.webdevpro.net/responsive-design
+login : design
+password : reponsive
+
+---------------
+
+https://formation.webdevpro.net/sass
+login : sass
+password : lang
+
+---------------
+
+00 =>
+écrire ce qu'on va faire 
+faire 
+cas pratique 
+correction => regarder ta réponse 
+
+02 => Emmet ???  
+
+maquette à coder => html 
+css // sass 
+js 
+
+Visual Studio Code => extension Emmet (fonctionnalité de VSC)
+écrire du html très très vite et sans erreur 
+https://www.emmet.io/
+
+autocomplétion
+
+01-emmet.html

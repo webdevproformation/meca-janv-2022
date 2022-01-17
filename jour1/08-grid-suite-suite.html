@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- .grid>article*9>(h2>lorem4)+p>lorem20 -->
+    <div class="grid">
+        <article class="first">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repudiandae quod illo eaque velit ratione laudantium officiis in fugiat dolorem?</p>
+        </article>
+        <article>
+            <h2>Repellat obcaecati nostrum tenetur!</h2>
+            <p>Ad est saepe temporibus culpa minima mollitia! Hic minima molestias officia sapiente aspernatur id, eum, tempora doloremque eos, repellendus praesentium.</p>
+        </article>
+        <article>
+            <h2>Saepe officiis itaque odio?</h2>
+            <p>Reiciendis voluptatem officia accusantium consequuntur reprehenderit quidem ea dolorem corporis, distinctio illum accusamus illo error atque eos fuga molestias aperiam.</p>
+        </article>
+        <article>
+            <h2>Maxime adipisci voluptatibus ratione.</h2>
+            <p>Neque dolor reprehenderit fuga quam blanditiis repellendus eveniet voluptatibus magnam minima amet ea ut incidunt laborum, consectetur veniam ipsa maiores?</p>
+        </article>
+        <article>
+            <h2>Autem assumenda placeat temporibus.</h2>
+            <p>Ex magni unde amet laborum nulla expedita minima nam. Saepe possimus adipisci ipsam officiis illum debitis repellendus ut fugiat iusto.</p>
+        </article>
+        <article>
+            <h2>Animi expedita perspiciatis voluptates!</h2>
+            <p>Ab ea error voluptatibus repellat vel id minima ut exercitationem doloribus in molestias culpa, similique excepturi totam animi eveniet aspernatur.</p>
+        </article>
+        <article>
+            <h2>Laborum, veritatis? Dignissimos, nemo.</h2>
+            <p>Veritatis enim maxime necessitatibus eum corrupti incidunt nostrum maiores, dicta, temporibus, libero inventore. Similique perspiciatis tempore ea dicta voluptates cum!</p>
+        </article>
+        <article>
+            <h2>Facilis dolorem tempora vitae.</h2>
+            <p>Officia perferendis id dicta alias doloribus repellat saepe, corrupti ipsa nam fugit, possimus esse enim ad voluptatibus sed maiores voluptas!</p>
+        </article>
+        <article>
+            <h2>Ex officiis impedit dolores.</h2>
+            <p>Asperiores exercitationem harum itaque dolore commodi libero, corrupti modi repudiandae ratione voluptatibus veniam omnis, rem nesciunt cum, tenetur dolorem laboriosam.</p>
+        </article>
+    </div>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr );
+            gap:20px;
+        }
+        @media (min-width:600px) {
+            .grid{
+                grid-template-columns: repeat(3, 1fr );
+            } 
+        }
+        @media (min-width:960px) {
+            .grid{
+                grid-template-columns: repeat(4, 1fr );
+            } 
+        }
+        .first{
+            font-size: 2em;
+            grid-column: span 2;
+            grid-row: span 2;
+            border:2px solid red;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!-- 01-emmet.html
+écrire raccourcis => générer une page html complexe
+emmet ne fonctionne QUE sur des pages .html 
+
+si .txt => emmet (fonctionne )
+si fichier .twig.html
+
+8 
+! => créer une structure de page
+* => plusieurs balises
+> enfant directe
+. class
+# id 
++ à côté 
+() regrouper
+lorem
+$ (avec le symbole *)
+-->
+
+<!-- p qui contient 20 mots factuces-->
+<!-- p>lorem20 -->
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut veniam rerum, aliquam quo recusandae nobis adipisci repellat nesciunt reprehenderit.</p>
+
+<!----> 3 p qui contiennent 5 mots factices chacuns-->
+<!-- p*3>lorem5 -->
+<p>Lorem ipsum dolor sit amet.</p>
+<p>Officia magni a aut iusto!</p>
+<p>Deleniti quibusdam natus id necessitatibus!</p>
+
+
+<!-- menu 
+ul qui contient 5 <li> qui contiennent chacun 1 mot factice
+-->
+<!-- ul>li*5>lorem1 -->
+<ul>
+    <li>Lorem.</li>
+    <li>Earum!</li>
+    <li>Accusamus!</li>
+    <li>Ratione.</li>
+    <li>Earum.</li>
+</ul>
+
+<!-- 5 <article> qui contient titre h2 qui contient 3 mots suivi d'un p qui contient 5 mots -->
+
+<!-- article*5>(h2>lorem3)+p>lorem5 -->
+<article>
+    <h2>Lorem, ipsum dolor.</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+</article>
+<article>
+    <h2>Quaerat, harum nihil!</h2>
+    <p>Id provident dolorum placeat consectetur.</p>
+</article>
+<article>
+    <h2>Minima, consequuntur possimus!</h2>
+    <p>Molestiae harum necessitatibus esse cupiditate.</p>
+</article>
+<article>
+    <h2>Recusandae, impedit expedita!</h2>
+    <p>Veniam, quidem. Nisi, aperiam corrupti.</p>
+</article>
+<article>
+    <h2>Voluptatum, possimus a.</h2>
+    <p>Enim hic deleniti fuga accusamus?</p>
+</article>
+
+
+<!-- 5 p 
+    class p p1 et il contient 10 mots 
+    class p p2 et il contient 10 mots 
+    class p p3 et il contient 10 mots 
+    class p p4 et il contient 10 mots 
+    class p p5 et il contient 10 mots  -->
+
+<!-- p*5.p.p$>lorem10 -->
+<p class="p p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, ut.</p>
+<p class="p p2">Delectus nobis provident dolores repellat maiores labore fuga dolore quidem!</p>
+<p class="p p3">Delectus soluta accusantium voluptatum veniam doloremque quo architecto aperiam illo?</p>
+<p class="p p4">Tempore voluptatibus saepe rem mollitia quod unde quam excepturi architecto.</p>
+<p class="p p5">Qui nihil expedita itaque quisquam molestiae totam laudantium ratione rem!</p>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!--
+    cas pratique dans le dossier jour1 créer un nouveau fichier 02-exo.html
+
+    structure de page html 
+    dans la balise body 
+        titre de niveau 1 qui contient 5 mots 
+        3 div qui contiennent h2 qui contient 4 mots suivi d'un p qui contient 10 mots
+
+        section
+            qui contient une liste ul non ordonnée qui contient 5 items 5 mots factices
+
+        footer 
+            qui contient une liste ol ordonnées de 10 items de 3 mots de ton choix 
+-->
+03-image.html

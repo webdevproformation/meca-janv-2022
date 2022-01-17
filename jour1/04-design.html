@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>premier design responsive</title>
+    <link rel="stylesheet" href="04-style.css">
+</head>
+<body>
+    <!-- .container -->
+    <div class="container">
+        <header class="header">
+            <!-- Block__Element--Modifier => BEM => technique de nommage Yandex  
+            PHP ou javascript 
+            créer des variables / class / fonctions
+            PascalCase  class HomeController{ }
+            camelCase  $vuePage = ".....";
+            kebab_case $vue_page = ".....";
+            -->
+            <h1 class="header__titre">Lorem ipsum dolor sit.</h1>
+            <nav class="header__nav">
+                <!-- ul>li*10>lorem1 -->
+                <ul class="header__menu">
+                    <li class="header__item">Lorem.</li>
+                    <li class="header__item">Nesciunt.</li>
+                    <li class="header__item">Earum.</li>
+                    <li class="header__item">Accusantium.</li>
+                    <li class="header__item">Commodi.</li>
+                    <li class="header__item">Delectus!</li>
+                    <!-- https://emojipedia.org/ -->
+                    <li class="header__item--sm">🎿</li>
+                    <li class="header__item--sm">🎤</li>
+                    <li class="header__item--sm">🎸</li>
+                    <li class="header__item--sm">🎬</li>
+                </ul>
+            </nav>
+        </header>
+        <!-- <div id="header"></div> -->
+        <main class="main">
+            <section class="main__section">
+                <!-- article*3>img[src="http://via.placeholder.com/450x200"]+p>lorem40 -->
+                <article class="main__article">
+                    <img src="http://via.placeholder.com/450x200" alt="" class="main__articleImg">
+                    <p class="main__articleP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, dignissimos ipsa maiores, deserunt suscipit, atque laudantium voluptatibus ipsam praesentium sit ex at ducimus quibusdam quaerat quod ut. Voluptas repellat obcaecati necessitatibus nostrum natus! Itaque quo nam eum cupiditate qui dolorem!</p>
+                </article>
+                <article class="main__article">
+                    <img src="http://via.placeholder.com/450x200" alt="" class="main__articleImg">
+                    <p class="main__articleP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, dignissimos ipsa maiores, deserunt suscipit, atque laudantium voluptatibus ipsam praesentium sit ex at ducimus quibusdam quaerat quod ut. Voluptas repellat obcaecati necessitatibus nostrum natus! Itaque quo nam eum cupiditate qui dolorem!</p>
+                </article>
+                <article class="main__article">
+                    <img src="http://via.placeholder.com/450x200" alt="" class="main__articleImg">
+                    <p class="main__articleP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, dignissimos ipsa maiores, deserunt suscipit, atque laudantium voluptatibus ipsam praesentium sit ex at ducimus quibusdam quaerat quod ut. Voluptas repellat obcaecati necessitatibus nostrum natus! Itaque quo nam eum cupiditate qui dolorem!</p>
+                </article>
+            </section>
+            <figure class="main__hero">
+                <!-- display flex => order -->
+                <img src="http://via.placeholder.com/1200x500" alt="" class="main__heroImg">
+            </figure>
+        </main>
+       <!--  <div id="main"></div> -->
+        <footer class="footer">
+            <p class="footer__copy">&copy; - 2022</p>
+        </footer>
+    </div>
+</body>
+</html>
