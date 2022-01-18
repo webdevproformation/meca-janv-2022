@@ -14,6 +14,7 @@ button{
     @extend %toto;
     background : pink;
 }
+//rdv 15h20 !!
 
 %btn{
     border:1px solid black;
@@ -37,3 +38,5 @@ button{
     @extend %btn;
     font-size: 1.4em;
 }
+
+

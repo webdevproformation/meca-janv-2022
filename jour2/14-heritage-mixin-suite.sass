@@ -1,0 +1,43 @@
+// .sass
+// éviter de répéter des règles css via héritage
+%btn
+    border: none
+    border-radius: 5px
+    cursor: pointer
+    background: none
+    color: white
+
+.btn--danger
+    @extend %btn
+    background: red
+
+.btn--success
+    @extend %btn
+    background: green
+
+// autre manière de faire exactement => éviter de se répéter
+
+@mixin btn($color-bg)
+    border: none
+    border-radius: 5px
+    cursor: pointer
+    background: none
+    color: white
+    background: $color-bg
+
+.btn--danger
+    @include btn(#DA1212)
+
+.btn--success
+    @include btn(#91C483)
+
+// site 
+// jour 
+//    primary blue
+//    secondary yellow
+// nuit  
+//    primary bluedark
+//    secondary yellowdark
+
+// $variable => $theme
+// map => tableau / objet 

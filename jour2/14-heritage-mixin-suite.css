@@ -1,0 +1,34 @@
+.btn--danger, .btn--success {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: none;
+  color: white;
+}
+
+.btn--danger {
+  background: red;
+}
+
+.btn--success {
+  background: green;
+}
+
+.btn--danger {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: none;
+  color: white;
+  background: #DA1212;
+}
+
+.btn--success {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: none;
+  color: white;
+  background: #91C483;
+}
+/*# sourceMappingURL=14-heritage-mixin-suite.css.map */

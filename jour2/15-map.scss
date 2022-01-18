@@ -1,0 +1,21 @@
+// map => tableau 
+$theme: (
+    "jour": (
+        "primary": blue ,
+        "secondary": yellow
+    ),
+    "nuit": (
+        "primary": #041562,
+        "secondary": #FFC900
+    )      
+);
+
+// boucle parcourir chaque valeur dans le tableau (map)
+@each $mode in  $theme{
+    @each $prop , $couleur in $mode{
+       @debug $mode; 
+      /*  @debug map-get($map: $mode , $key: $prop );  */
+       @debug $couleur ; 
+    } 
+}
+

@@ -1,0 +1,29 @@
+créer le fichier 16-exo.html 
+    balise div qui a la class container 
+        h1 qui contient 5 mots fictifs 
+        3 p contenant 10 mots fictifs 
+        deux images comme attribut src la valeur suivante : 
+            https://via.placeholder.com/150x100
+
+créer le fichier 16-exo.scss 
+    créer deux mixin 
+        a/ nom de la mixin : centrer 
+        pas de parametre
+            width 960px 
+            margin 0 auto
+        
+        b/ nom de la mixin : bordure 
+        deux paramètres 
+            epaisseur
+            couleur : #3498db  (dispose d'une valeur par défaut )
+        contient une instruction
+            border : epaisseur solid couleur ;
+        
+        c/ utiliser la mixin centrer sur la balise qui a la class container 
+
+        d/ utiliser la mixin bordure sur les balises img et h1 
+
+        e/ styliser les p 
+            supprimer les mettres des bordures 2px et #FEECE9 
+
+        f/ compiler le fichier .scss en css
