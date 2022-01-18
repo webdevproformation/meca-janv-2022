@@ -1,0 +1,164 @@
+
+// variable ok !!
+
+// nesting => imbrication 
+
+// <div class="container">
+// <h1>toto</h1> rouge
+// <p>toto</p> vert
+// <div>
+// <div class="container2">
+// <h1>tata</h1> jaune
+// <p>tata</p> rose
+// <div>
+
+.container h1{
+    color :red;
+}
+.container p{
+    color : green; 
+}
+/*ici */
+.container{ // nesting sass 
+    h1{ // .container h1{}
+        color :red;
+    }
+    p{
+        color : green; 
+    }
+    h3{
+        color: purple;
+    }
+    a{
+        color :plum; 
+    }
+}
+
+a{
+    color : green;
+}
+a:hover{
+    color: red;
+}
+
+a{
+    color:green;
+    &:hover{ // a:hover{} // nesting sans espace 
+        color:red; 
+    }
+    &::after{}
+    &:after{}
+    &::before{}
+}
+
+a:hover{} // pseudo sélecteur
+a::after{} // pseudo élément // écrire du texte depuis le fichier .css dans le fichier .html 
+a:after{} // pseudo élément
+
+p{
+    & > a{
+        color : pink;
+    }
+    a{
+        color : red; 
+        &:first-child{
+            color : green; 
+        }
+    }
+}
+
+// BEM utilisable via du nesting  !!! 
+
+.header__{
+    &title{
+        font-size: 20px;
+    }
+    &p{
+        font-size: 10px;
+        &:hover{
+            color:red; // maximum 3 niveaux 
+        }
+    }
+    &p--last{
+        display: none; 
+    }
+    &img{
+        border:2px solid green;
+    }
+}
+
+
+// possible d'utiliser le nesting pour le reponsive design
+
+// version css
+.main{
+    display: grid ;
+    grid-template-columns: 1fr;
+    gap : 10px; 
+
+}
+@media (min-width:600px) {
+    .main{
+        grid-template-columns: 1fr 1fr;
+    } 
+}
+// version sass
+
+/*
+block header
+block main
+block footer
+*/
+
+.main{
+    display: grid ;
+    grid-template-columns: 1fr;
+    gap : 10px; 
+    @media (min-width:600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width:700px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (min-width:900px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    &__titre{
+        color : red;
+        font-size: 20px;
+    }
+    &__img{
+        border:2px solid green;
+        @media (min-width:900px) {
+            border:none;
+        }
+    }
+}
+
+// <nav class="col-sm-2 col-xs-4 col-lg-12"><nav>
+// <nav class="main__article"><nav>
+
+.navbar {
+    display:flex;
+    &__expand{}
+    &__expand--sm{
+        @media (screen) {
+            
+        }
+    }
+    &__expand--xl{}
+    &__expand--xxl{}
+    &__nav{}
+    &__item{}
+    &__link{}
+  }
+
+// @content // sass 
+
+
+.container2 h1{
+    color : yellow;
+}
+.container2 p{
+    color : pink; 
+}
