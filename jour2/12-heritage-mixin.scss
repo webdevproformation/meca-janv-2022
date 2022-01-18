@@ -1,0 +1,39 @@
+
+// sélecteur théorique qui ne peut pas être associé à une balise
+%toto{
+    border:2px solid red;
+    border-radius: 5px;
+    color:green;
+}
+// héritage
+a {
+    @extend %toto;
+    background: blue;
+}
+button{
+    @extend %toto;
+    background : pink;
+}
+
+%btn{
+    border:1px solid black;
+    background: none;
+    color:black;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.btn-sm{
+    @extend %btn;
+    font-size: 0.7em;
+}
+
+.btn-sm-round{
+    @extend .btn-sm;
+    border-radius: 50%; /*dernier qui est écrit qui est appliqué */
+}
+
+.btn-xl{
+    @extend %btn;
+    font-size: 1.4em;
+}

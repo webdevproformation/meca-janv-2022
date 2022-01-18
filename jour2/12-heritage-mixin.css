@@ -1,0 +1,36 @@
+@charset "UTF-8";
+a, button {
+  border: 2px solid red;
+  border-radius: 5px;
+  color: green;
+}
+
+a {
+  background: blue;
+}
+
+button {
+  background: pink;
+}
+
+.btn-sm, .btn-sm-round, .btn-xl {
+  border: 1px solid black;
+  background: none;
+  color: black;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.btn-sm, .btn-sm-round {
+  font-size: 0.7em;
+}
+
+.btn-sm-round {
+  border-radius: 50%;
+  /*dernier qui est écrit qui est appliqué */
+}
+
+.btn-xl {
+  font-size: 1.4em;
+}
+/*# sourceMappingURL=12-heritage-mixin.css.map */
