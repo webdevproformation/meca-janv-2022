@@ -1,0 +1,27 @@
+h1 {
+  padding: 10px 20px;
+  border: 1px solid black;
+  -webkit-text-decoration: underline #fff;
+          text-decoration: underline #fff;
+}
+
+p {
+  width: 100px;
+}
+
+.container h2 p {
+  font-size: 20px;
+}
+
+.main__titre {
+  font-size: 6.66667px;
+}
+
+p {
+  background-color: red;
+}
+
+h3 {
+  width: calc( 40px - 2px);
+}
+/*# sourceMappingURL=05-variable.css.map */

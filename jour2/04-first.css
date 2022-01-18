@@ -1,0 +1,16 @@
+body, h1, p, ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 
+en css uniquement 
+*/
+p {
+  background: blue;
+}
+/*# sourceMappingURL=04-first.css.map */

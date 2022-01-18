@@ -1,0 +1,47 @@
+// en sass => créer des variables 
+$couleur : #fff;
+$largeur : 10px;
+$padding : 10px 20px;  // un ou plusieurs valeurs
+$bordure : 1px solid black; 
+$bordure-blanche : 1px solid $couleur; 
+// les variables ne sont utilisées et traduites QUE lorsqu'elles sont utilisées dans un sélecteur 
+h1{
+    padding : $padding;
+    border : $bordure;
+    text-decoration: underline $couleur;
+}
+// si c'est des valeurs numériques (avec unité) effectuer des calculs
+// addition / soustraction / divisions / multiplication 
+p{
+    width : $largeur * 10;  // calc( var(--largeur) * 10  )
+}
+
+// variable stocker une valeur 
+// variable peut aussi stocker des sélecteurs / propriétés css 
+
+$titre-principal : '.container h2 p' ;
+$autre-titre-principal : '.main__titre' ;
+
+#{$titre-principal}{
+    font-size:20px;
+}
+#{$autre-titre-principal}{
+    font-size: (20px / 3);
+}
+$fond : background-color ;
+p{
+    #{$fond}: red; 
+}
+
+// variable css comme variable sass 
+
+$minimum : 40px ;
+
+h3{
+    width : calc( #{$minimum} - 2px  );
+    // variable sass qui est utilisée dans une fonction css 
+    // calc()
+    // repeat()
+    // var()
+}
+

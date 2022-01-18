@@ -1,0 +1,36 @@
+body, h1, p, ul{
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+
+// dossier => fichier image jpg / png gif ....
+
+// psd / indd / ai <= image jpg / png gif 
+
+// pdf =>  fichier image jpg / png gif
+/* 
+en css uniquement 
+*/
+// /**/  en sass ça marche 
+// /**/ # en PHP 
+// twig {# #}
+
+// Watch Sass => Watch 
+// prend tous les fichiers .sass / .scss dans le projet en cours
+// .css  
+// /*# sourceMappingURL=04-first.css.map */
+// ligne technique navigateur de faire l'équivalence entre le fichier .css et le fichier .sass / scss 
+// facultatif 
+// .css.map
+
+p{
+    background: blue;
+}
+
+// rdv 10h40 !!!
+// 

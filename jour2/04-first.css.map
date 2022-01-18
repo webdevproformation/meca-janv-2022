@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,EAAE,EAAE,EAAE,CAAC,EAAE,EAAE,CAAA;EACX,MAAM,EAAE,CAAC;CACZ;;AAED,AAAA,EAAE,CAAA;EACE,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,CAAC;CACb;;AAQD;;EAEE;AAaF,AAAA,CAAC,CAAA;EACG,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "04-first.scss"
+    ],
+    "names": [],
+    "file": "04-first.css"
+}
