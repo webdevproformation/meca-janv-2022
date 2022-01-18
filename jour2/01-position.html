@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*changer la position naturelle de la balise par rapport à elle même*/
+        .p0{
+            background-color: purple;
+            color:wheat;
+        }
+        
+        .p1{
+            position: relative; /* relative tout seul les suivants sont poussés  */
+            top:-30px; 
+            right:-20px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p class="p0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dignissimos!</p>
+    <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dignissimos!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dignissimos!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, dignissimos!</p>
+    <!-- flux naturel de la balise -->
+
+    <hr>
+
+    <div class="carre">
+        <p>Lorem.</p>
+        <p class="coin__droiteHaut">Magni!</p>
+        <p>Veritatis.</p>
+        <p>Enim.</p>
+    </div>
+
+    <style>
+        .carre {
+            width:300px;
+            height:300px;
+            background: #11468F;
+            color : #EEEEEE;
+            position: relative;
+            overflow: hidden;
+        }
+        .coin__droiteHaut{
+            background: #DA1212;
+            position: absolute;/* l'élément ne pousse plus les balises suivantes */
+            top: 0;
+            margin: 0;
+            right:0px;
+            animation: k2000 1000ms linear infinite alternate;
+        }
+
+        @keyframes k2000 {
+            from{
+                right:0px;
+            }
+            to{
+                right:100%;
+            }
+        }
+
+
+
+    </style>
+</body>
+</html>

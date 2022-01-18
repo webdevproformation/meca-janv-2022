@@ -1,0 +1,53 @@
+/*
+
+03-style.scss => indentation est falcultative 
+03-style.sass => indentation est essentielle
+
+SASS langage (comme le html / css / javascript)
+sur ensemble => si écrit du css classique => tu es entrain du sass 
+css valide est du sass 
+
+en plus de tous les mots clés de css 
+h1, h2 ... p .toto #id  ...
+font-size
+font-family : "arial" ...
+#fff 
+
+en plus SASS apporte des mots clés en + (qui sont absents du langage css )
+fonction / variable / calcul / boucle for each 
+if 
+mixin / nesting (imbrication) / héritage
+:root{
+    --variable:12px; 
+}
+calc()
+
+=> https://sass-lang.com/ (la documentation officielle) 
+
+fichier .scss ou des fichiers .sass
+
+ne sont pas compris par défaut par les navigateurs
+
+compiler (traduire) .scss => .css
+
+modifier que le .scss => .css à ne pas toucher 
+sources                => build 
+
+traduire / compiler / transpiler .scss => .css 
+
+plusieurs logiciels qui permettent de réaliser cette traduction
+
+SOLUTION PAYANTE => jolie et avec menu 
+SOLUTION GRATUITE => travailler en ligne de commande 
+écrire ce que tu veux tu veux faire dans un bash / terminal / shell pour réaliser la traduction 
+SOLUTION Visual Studio Code Extension qui permet de réaliser des traductions 
+
+
+=> live sass compiler
+
+
+*/
+
+h1{
+    color : red; 
+}
