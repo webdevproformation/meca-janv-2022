@@ -1,0 +1,46 @@
+/*
+reset
+*/ 
+body, h1, h2, h3, p, ul{
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+/*
+class utilitaires
+*/
+
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    /***/
+}
+
+img{
+    max-width: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+
+/*
+variable en sass
+*/
+$noir : #000;
+$mauve : purple;
+$gris-clair : #eee; 
+$marge : 5px; 
+
+/*
+nouveau 
+héritage / mixin 
+*/
+
+/*
+block 1 nesting et BEM 
+block 2
+block 3 
+*/
