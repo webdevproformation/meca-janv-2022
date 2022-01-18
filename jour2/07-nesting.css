@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container h1 {
   color: red;
 }
@@ -148,4 +149,53 @@ block footer
 .container2 p {
   color: pink;
 }
+
+/*
+/*
+1/créer un nouveau fichier 08-exo.scss
+2/ créer le fichier 08-exo.html
+3 lancer le watch sur Visual Studio
+
+Dans le fichier 08-exo.html
+menu : nav > ul >li *5 > a href= # > texte 1 mot factice
+
+scss 
+menu est une grille de 5 colonnes
+séparation de 10px
+si on passe sur un écran de largeur 700px => grille devient une grille de 3 colonnes
+
+le 1ère élement du menu
+lorsque l'on passe la souris dessus => rouge 
+
+le 2ème élement du menu
+lorsque l'on passe la souris dessus => taille de police va grandir de 20%
+
+le dernier élément du menu 
+changer la couleur de fond dans la couleur voulue
+changer la police dans la couleur voulue
+*/
+/*
+1/  Créer un nouveau fichier 10-exo.html contenant le html suivant
+
+div class container 
+    section class intro
+        h2 contenent 5 mots factices
+        5 p contenant 10 mots factices
+    section class conclusion
+        h2 contenant le mot conclusion
+        2 paragraphes avec 5 mots factices
+
+2/ créer un nouveau fichier 10-exo.scss
+
+  a. sélectionner le 3eme p qui est dans la section intro et lui donner une couleur verte (emerald) https://flatuicolors.com/palette/defo 
+
+  b. pour tous les autres p de cette section mettre la couleur rouge alizarin 
+
+  c. sélectionner le dernier p dans la section conclusion et lorsque vous passez la souris dessus, changer sa couleur en blue peter river 
+
+  d. enfin si l'écran est compris entre 400px et 700px =>  
+  tous les p de la page auront la couleur sun flower 
+
+
+*/
 /*# sourceMappingURL=07-nesting.css.map */
