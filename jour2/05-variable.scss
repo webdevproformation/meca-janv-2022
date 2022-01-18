@@ -45,3 +45,35 @@ h3{
     // var()
 }
 
+/*
+a/ dans le dossier jour2 créer le fichier 06-exo.scss 
+b/ ce fichier contient les 5 variables suivantes :
+
+largeur 30px
+hauteur 12px
+rouge #ff9292
+vert  #bbdfc8
+sommaire = .introduction
+
+c/ utiliser les variables dans sélecteurs suivants :
+
+h1 
+ largeur de largeur / 2
+ hauteur de hauteur * 2
+ marge interne hauteur / 2 
+
+a 
+    la couleur de texte rouge 
+
+si on passe sur la balise a avec la souris
+    la couleur de texte  devient verte 
+
+pour la balise ayant la class introduction 
+    largeur de largeur * 2
+    hauteur de hauteur * 4
+    marge interne hauteur 
+    border 2px solid couleur verte 
+
+
+
+*/
