@@ -9,13 +9,20 @@ $theme: (
         "secondary": #FFC900
     )      
 );
-
+// map 
 // boucle parcourir chaque valeur dans le tableau (map)
-@each $mode in  $theme{
-    @each $prop , $couleur in $mode{
-       @debug $mode; 
-      /*  @debug map-get($map: $mode , $key: $prop );  */
-       @debug $couleur ; 
+@each $mode , $val in  $theme{
+    @each $prop , $couleur in $val{
+      .btn__#{$mode}--#{$prop}{
+          color : $couleur; 
+      }
     } 
+}
+
+@mixin bordure($epaisseur , $couleur : #fff){
+    border: $epaisseur solid $couleur;
+}
+h1, img{
+    @include bordure(2px, #000 )
 }
 

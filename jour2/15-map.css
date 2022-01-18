@@ -1,6 +1,20 @@
-/*  @debug map-get($map: $mode , $key: $prop );  */
-/*  @debug map-get($map: $mode , $key: $prop );  */
-/*  @debug map-get($map: $mode , $key: $prop );  */
-/*  @debug map-get($map: $mode , $key: $prop );  */
+.btn__jour--primary {
+  color: blue;
+}
 
+.btn__jour--secondary {
+  color: yellow;
+}
+
+.btn__nuit--primary {
+  color: #041562;
+}
+
+.btn__nuit--secondary {
+  color: #FFC900;
+}
+
+h1, img {
+  border: 2px solid #000;
+}
 /*# sourceMappingURL=15-map.css.map */
