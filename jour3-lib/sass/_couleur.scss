@@ -1,0 +1,34 @@
+$theme : (
+    jour : (
+        rouge : #DA1212,
+        bleu-marine : #041562,
+        bleu-ciel : #11468F,
+        gris : #EEEEEE,
+        noir : #000,
+        blanc : #fff 
+    ),
+    nuit : (
+        rouge : #ff6262,
+        bleu-marine : #3d5ef0,
+        bleu-ciel : #118f22,
+        gris : #1d29d4,
+        noir : #000,
+        blanc : #fff
+    ),
+    accessible: (
+        rouge : #ff6262,
+        bleu-marine : #3d5ef0,
+        bleu-ciel : #118f22,
+        gris : #1dd435,
+        noir : #000,
+        blanc : #fff
+    )
+);
+/*map dans map*/
+@each $key, $valeur in $theme{ // boucle
+    @each $nom , $hex in $valeur{ // dans une boucle
+        .#{$key} .p-#{$nom}{
+            color:$hex;
+        }
+    }
+}

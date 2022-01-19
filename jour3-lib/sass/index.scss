@@ -1,0 +1,20 @@
+// reset
+@import "reset";
+
+// utilitaires 
+@import "grid";
+@import "couleur";
+// Traduction @import  => fichier _reset.scss => partial
+// partie du code qui doit être fusionné dans un fichier global 
+// index.css 
+@import "espacement";
+
+// PHP accueil => tout le css 
+// PHP vente => tout le css vente 
+
+/*
+block header
+module => BEM 
+block main
+block footer
+*/

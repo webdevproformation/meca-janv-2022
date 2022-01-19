@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    width:1000px;
+    max-width:100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    width:100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.row{
+    display:flex;
+    align-items: center;
+}
+
+//gouttier => espace entre les colonnes 
+
+@for $i from 0 through 5{
+    @if($i > 0){
+        .gutter-#{$i} > * + * { 
+            // toutes les balises enfants directs de row row > *
+            //  + * toutes sauf la première
+            margin-left: $i*10+px
+        }
+    }
+}
+
+$nb-col : 12 ;
+
+@for $i from 1 through $nb-col{
+    .col-#{$i}{
+        width: percentage($i / $nb-col) ;
+    }
+}
+
+$grid-util : (
+    js :(
+        prop : justify-content,
+        val : (
+            end : flex-end,
+            btw : space-between,
+            str : flex-start,
+            arr : space-around ,
+            cnt : center
+        )
+    ),
+    al :(
+        prop : align-items,
+        val : (
+            end : flex-end,
+            str : flex-start,
+            cnt : center,
+            bsl : baseline
+        )
+    )
+);
+
+@each $prefix , $data in  $grid-util{
+    $prop : map-get($data , prop);
+    $val : map-get($data , val);
+    @each $k , $v in $val{
+        .#{$prefix}-#{$k}{
+            #{$prop} : $v; 
+        }
+    }
+}
+
+

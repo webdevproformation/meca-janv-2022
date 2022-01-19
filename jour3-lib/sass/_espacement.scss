@@ -1,0 +1,66 @@
+$utilitaires : (// map => 2 valeurs 
+    mr : ( // map 2 valeurs => prop valeur qui est map 
+        prop : margin-right,
+        valeur : ( 
+            0 : 0,
+            1 : 1em,
+            2 : 1.3em,
+            3 : 1.8em,
+            4 : 2.2em,
+            a : auto
+        )
+    ),
+    ml : (
+        prop : margin-left,
+        valeur : ( 
+            0 : 0,
+            1 : 1em,
+            2 : 1.3em,
+            3 : 1.8em,
+            4 : 2.2em,
+            a : auto
+        )
+    ),
+    mt : (
+        prop : margin-top,
+        valeur : ( 
+            0 : 0,
+            1 : 1em,
+            2 : 1.3em,
+            3 : 1.8em,
+            4 : 2.2em,
+            a : auto
+        )
+    ),
+    mb : (
+        prop : margin-bottom,
+        valeur : ( 
+            0 : 0,
+            1 : 1em,
+            2 : 1.3em,
+            3 : 1.8em,
+            4 : 2.2em,
+            a : auto
+        )
+    ),
+    d : (
+        prop : display,
+        valeur : (
+            flex : flex,
+            none : none,
+            block : block,
+            grid : grid,
+        )
+    )
+);
+
+
+@each $prefix , $valeur in $utilitaires{
+    $prop : map-get($valeur , prop); // margin-right / margin-left
+    $nombres : map-get($valeur , valeur);
+    @each $key , $v in $nombres{
+        .#{$prefix}-#{$key}{
+            #{$prop} : #{$v};
+        }
+    }
+}
