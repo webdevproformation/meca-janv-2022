@@ -5,6 +5,12 @@ index.scss => charger tous les autres fichiers
     _reset.scss => reset des balises html
     // utilitaires
     _variables.scss => 4 couleurs de ton choix 
+    _font.scss
+        télécharger font dans google font 
+        @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+        appliquer sur body{
+            
+        }
     _espacement.scss => espacements margin / padding => 1 => 5
             ml / mt / mr / mb 1 => 5
             pl / pt / pr / pb 1 => 5
