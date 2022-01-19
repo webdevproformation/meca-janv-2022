@@ -1,2 +1,115 @@
 // créer un système de grille responsive 
 
+*{
+    box-sizing: border-box;
+}
+.container{
+    width:1000px;
+    max-width:100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    width:100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+//gouttier => espace entre les colonnes 
+
+@for $i from 0 through 5{
+    @if($i > 0){
+        .gutter-#{$i} > * + * { 
+            // toutes les balises enfants directs de row row > *
+            //  + * toutes sauf la première
+            margin-left: $i*10+px
+        }
+    }
+}
+
+
+$point-rupture : (
+    xs : 320px,
+    md : 480px,
+    xl : 768px,
+    xxl : 960px
+);
+
+@mixin xs{
+    @media (min-width:map-get($point-rupture , xs)) { // 
+        @content ; 
+    }
+}
+@mixin md{
+    @media (min-width:map-get($point-rupture , md)) {
+        @content ; 
+    }
+}
+@mixin xl{
+    @media (min-width:map-get($point-rupture , xl)) {
+        @content ; 
+    }
+}
+@mixin xxl{
+    @media (min-width:map-get($point-rupture , xxl)) {
+        @content ; 
+    }
+}
+
+h1{
+    font-size: 1em;
+    @include xs(){ // mixin imbriquée 
+        font-size: 2em;
+        font-weight: bold;
+    }
+    @include xl(){
+        font-size: 3em;
+        font-weight: normal;
+    }
+    @include xxl(){
+        font-size: 10em;
+        color:green; 
+    }
+}
+
+// grille responsive
+// .col-xs-1
+$nb-col : 12 ;
+@include xs(){
+    @for $i from 1 through $nb-col{
+        .col-xs-#{$i}{
+            width: percentage($i / $nb-col) ;
+        }
+    }
+}
+@include md(){
+    @for $i from 1 through $nb-col{
+        .col-md-#{$i}{
+            width: percentage($i / $nb-col) ;
+        }
+    }
+}
+@include xl(){
+    @for $i from 1 through $nb-col{
+        .col-xl-#{$i}{
+            width: percentage($i / $nb-col) ;
+        }
+    }
+}
+@include xxl(){
+    @for $i from 1 through $nb-col{
+        .col-xxl-#{$i}{
+            width: percentage($i / $nb-col) ;
+        }
+    }
+}
+

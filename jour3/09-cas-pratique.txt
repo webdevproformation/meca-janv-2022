@@ -1,0 +1,25 @@
+créer un nouveau dossier 
+jour3-mon-bootstrap 
+index.scss => charger tous les autres fichiers 
+    @import ....
+    _reset.scss => reset des balises html
+    // utilitaires
+    _variables.scss => 4 couleurs de ton choix 
+    _espacement.scss => espacements margin / padding => 1 => 5
+            ml / mt / mr / mb 1 => 5
+            pl / pt / pr / pb 1 => 5
+    _helper.scss 
+                => display : flex / grid / none / block
+                => justify-content => flex-end / flex-start / center / space-between / space-round
+                => align-items => flex-end / flex-start / center / baliseline / stretch
+    _colors.scss
+           .text-couleur => couleur choisie
+           .bg-couleur => fond de couleur 
+    _grid.scss
+            container / container fluid
+            gouttier
+            système de colonne responsive 
+                xs 500px
+                md : 700px
+                xl : 960px
+                xxl : 1200px
