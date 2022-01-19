@@ -32,3 +32,138 @@
 // sass 04-boucle.scss:04-boucle.min.css --style=compressed --watch
 //--style=compressed --watch drapeau 
 // donner des indications pour la traduction 
+
+// @each s'utilise sur un tableau en sass => map 
+
+// premier exemple de tableau (map) 1 seul niveau 
+
+$palette : ( // tableau avec 4 valeurs => clé / valeur
+    rouge : #DA1212,
+    bleu-marine : #041562,
+    bleu-ciel : #11468F,
+    gris : #EEEEEE,
+    noir : #000,
+    blanc : #fff
+);
+
+// récupérer uniquement les couleurs en hexadecimal 
+
+@each $nom,$hex in $palette{
+    .p-#{$nom}{
+        color : $hex; 
+    }
+};
+
+// 2ème manière utiliser les map => je veux récupérer la valeur hexa de la couleur bleu-marine
+h1{
+    color : map-get($palette , bleu-ciel);
+}
+
+//foreach(){} en PHP => parcourir un tableau facilement
+
+
+$theme : (
+    jour : (
+        rouge : #DA1212,
+        bleu-marine : #041562,
+        bleu-ciel : #11468F,
+        gris : #EEEEEE,
+        noir : #000,
+        blanc : #fff 
+    ),
+    nuit : (
+        rouge : #ff6262,
+        bleu-marine : #3d5ef0,
+        bleu-ciel : #118f22,
+        gris : #1d29d4,
+        noir : #000,
+        blanc : #fff
+    ),
+    accessible: (
+        rouge : #ff6262,
+        bleu-marine : #3d5ef0,
+        bleu-ciel : #118f22,
+        gris : #1dd435,
+        noir : #000,
+        blanc : #fff
+    )
+);
+/*map dans map*/
+@each $key, $valeur in $theme{ // boucle
+    @each $nom , $hex in $valeur{ // dans une boucle
+        .#{$key} .p-#{$nom}{
+            color:$hex;
+        }
+    }
+}
+
+
+// <body class="accessible">
+
+// <p class="gris"></p>
+
+$utilitaires : (// map => 2 valeurs 
+    mr : ( // map 2 valeurs => prop valeur qui est map 
+        prop : margin-right,
+        valeur : ( 
+            0 : 0,
+            1 : 1em,
+            2 : 1.3em,
+            3 : 1.8em,
+            4 : 2.2em,
+            a : auto
+        )
+    ),
+    ml : (
+        prop : margin-left,
+        valeur : ( 
+            0 : 0,
+            1 : 1em,
+            2 : 1.3em,
+            3 : 1.8em,
+            4 : 2.2em,
+            a : auto
+        )
+    ),
+    mt : (
+        prop : margin-top,
+        valeur : ( 
+            0 : 0,
+            1 : 1em,
+            2 : 1.3em,
+            3 : 1.8em,
+            4 : 2.2em,
+            a : auto
+        )
+    ),
+    mb : (
+        prop : margin-bottom,
+        valeur : ( 
+            0 : 0,
+            1 : 1em,
+            2 : 1.3em,
+            3 : 1.8em,
+            4 : 2.2em,
+            a : auto
+        )
+    ),
+    d : (
+        prop : display,
+        valeur : (
+            flex : flex,
+            none : none,
+            block : block,
+            grid : grid,
+        )
+    )
+);
+
+@each $prefix , $valeur in $utilitaires{
+    $prop : map-get($valeur , prop); // margin-right / margin-left
+    $nombres : map-get($valeur , valeur);
+    @each $key , $v in $nombres{
+        .#{$prefix}-#{$key}{
+            #{$prop} : #{$v};
+        }
+    }
+}
