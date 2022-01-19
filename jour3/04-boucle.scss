@@ -167,3 +167,42 @@ $utilitaires : (// map => 2 valeurs
         }
     }
 }
+
+
+// cas pratique 
+// créer une variable $utilitaire contenir les valeurs suivantes 
+
+fs
+    prop : font-size 
+    valeurs : 
+        1   1em
+        2   1.2em
+        3   1.8em
+        4   2em
+        5   3rem
+br
+    prop : border-radius
+    valeurs : 
+        none 0
+        sm 5px
+        big 20px
+        round 50% 
+
+à partir de cette variable utilitaire
+
+.fs-1{
+    font-size:1em;
+}
+
+.fs-5{
+    font-size:3rem;
+}
+
+.br-none{
+    border-radius: none;
+}
+.br-round{
+    border-radius: 50%;
+}
+
+
