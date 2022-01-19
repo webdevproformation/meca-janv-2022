@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 16px;
+        }
+        @media (min-width:600px) {
+            html{
+                font-size: 20px;
+            }
+        }
+        @media (min-width:900px) {
+            html{
+                font-size: 24px;
+            }
+        }
+        body{
+            font-family: sans-serif;
+        }
+
+        p{
+            /* par défaut => p => 16px de hauteur*/
+            /*font-size: 18px;*/ /* hauteur figée sur ton p*/
+            font-size: 1rem; /* 16px */
+            margin: 1em 0;
+        
+        }
+        /*
+            margin et padding => em => taille de la police de la balise sélectionnée
+            font-size em => rem (root cadratin)
+            règle d'or 
+        */
+        h1{
+            font-size: 2rem; /* 16 * 2 => 32px */
+            padding:  0; /* 8px */
+        }
+        h2{
+            font-size: 1.5rem ;/*  16 * 1.5 => 24px */;
+        }
+        h3{
+            font-size: 1.2rem ;/* 16 * 1.2 =>  20px */;
+        }
+
+        /*
+            gestion des tailles de polices 
+            en même temps la taille des espacements 
+        */
+    </style>
+</head>
+<body>
+    <h1>titre1</h1>
+    <h2>titre 2</h2>
+    <h2 class="h2">titre 2</h2>
+    <h3>titre 3</h3>
+    <h3 class="h3">titre 3</h3>
+    <p>Lorem, ipsum dolor.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aliquam ratione quo veritatis tempore, voluptatibus ea, doloribus rem magnam animi eos. Velit ducimus dicta sint possimus saepe alias, molestias eos tempore, aliquam nesciunt enim vero odio atque sed suscipit reiciendis?</p>
+    <p>Aperiam reprehenderit voluptas nemo iusto ut quidem quae dolore eum ipsam esse quasi expedita ex inventore quaerat aliquid eos totam labore quis impedit illum, voluptate quas cupiditate corporis. Fuga dolores, officia adipisci consequatur accusamus iste dolorem dolore cumque optio esse?</p>
+    <p>Rerum maiores consequuntur blanditiis eos porro quae libero facilis cumque tenetur reiciendis, dolorem possimus repudiandae qui at? Molestiae cupiditate dignissimos eaque, odit sapiente labore mollitia excepturi obcaecati beatae magnam ullam amet cum autem ab enim optio doloremque aspernatur perspiciatis. Hic.</p>
+    <p>Officia corporis distinctio quae ex omnis eum repellat libero laudantium labore at. Ad ut obcaecati soluta qui molestiae, rem neque optio! Rem minima illo architecto? Aperiam quibusdam excepturi laborum dolores dolorum modi adipisci in dolorem. Possimus inventore accusantium facilis voluptatum?</p>
+    <p>Rem debitis consectetur adipisci accusantium molestias fugit harum? Consequuntur corrupti id expedita, fuga facere neque nihil ad assumenda. Adipisci consectetur harum tenetur similique dolores rerum in illo impedit excepturi, facilis atque sapiente architecto pariatur nulla ad ex hic accusantium assumenda.</p>
+</body>
+</html>
