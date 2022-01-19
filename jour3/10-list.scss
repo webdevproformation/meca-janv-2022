@@ -1,0 +1,20 @@
+// Map
+$map : (
+    js : #ffffff,
+    angular : #000000
+);
+
+h1{
+    color : map-get($map , angular);
+}
+
+// Liste
+$toto : #fff red blue yellow;
+
+// que des valeurs pas de clé
+
+p{
+    color : nth($toto , 3);
+    border : 2px solid nth($toto , 1);
+}
+
