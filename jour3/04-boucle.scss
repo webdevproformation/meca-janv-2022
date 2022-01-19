@@ -205,4 +205,39 @@ br
     border-radius: 50%;
 }
 
+// créer un nouveau fichier 06-exo.scss 
 
+$theme 
+    couleur :
+        prop : color
+        valeurs :
+            primary : blue 
+            secondary : #eee
+            danger : red 
+            success : green
+            warning : pink
+    size :
+        prop : font-size 
+        valeurs :
+            default : 1rem
+            sm        0.8rem
+            md        1.3rem
+            xl        1.8rem
+            xxl       2.4rem
+
+générer depuis cette variable utilitaire les class suivantes
+
+.text-primary{
+    color : blue
+}
+
+.text-warning{
+    color : pink
+}
+
+.text-size-default{
+    font-size : 1rem
+}
+.text-size-xxl{
+    font-size : 2.4rem
+}

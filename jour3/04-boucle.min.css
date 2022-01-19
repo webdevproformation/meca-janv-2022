@@ -1,9 +1,9 @@
-/* Error: Expected identifier.
+/* Error: expected ":".
  *     ,
- * 176 |     prop : font-size 
- *     |           ^
+ * 210 | $theme 
+ *     |        ^
  *     '
- *   04-boucle.scss 176:11  root stylesheet */
+ *   04-boucle.scss 210:8  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Expected identifier.\a     \2577 \a 176 \2502      prop : font-size \d\a     \2502            ^\a     \2575 \a   04-boucle.scss 176:11  root stylesheet";
+  content: 'Error: expected ":".\a     \2577 \a 210 \2502  $theme \d\a     \2502         ^\a     \2575 \a   04-boucle.scss 210:8  root stylesheet';
 }
