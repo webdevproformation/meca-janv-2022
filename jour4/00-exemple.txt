@@ -1,0 +1,16 @@
+$map
+id client prix
+1  Alain     10
+2  Béatrice  20
+3  Charles   30 
+
+$values
+client
+Alain
+Béatrice
+
+=> map-get-multiple()
+
+id client prix
+1  Alain     10
+2  Béatrice  20

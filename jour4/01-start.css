@@ -1,0 +1,64 @@
+h1 {
+  width: 200px;
+  background: #F3C5C5;
+}
+
+button {
+  background: #00aaef;
+}
+
+button:hover {
+  background: #56ceff;
+}
+
+button:focus {
+  background: #006189;
+}
+
+.text-meca-light-1 {
+  color: #23bfff;
+}
+
+.text-meca-dark-1 {
+  color: #0086bc;
+}
+
+.text-meca-light-2 {
+  color: #56ceff;
+}
+
+.text-meca-dark-2 {
+  color: #006189;
+}
+
+.text-meca-light-3 {
+  color: #89ddff;
+}
+
+.text-meca-dark-3 {
+  color: #003d56;
+}
+
+.text-meca-light-4 {
+  color: #bcecff;
+}
+
+.text-meca-dark-4 {
+  color: #001923;
+}
+
+.text-meca-light-5 {
+  color: #effaff;
+}
+
+.text-meca-dark-5 {
+  color: black;
+}
+
+/* .text-principale-light-10{
+    color : #FF8E00 + 10% claire
+}
+.text-principale-dark-10{
+    color : #FF8E00 + 10% dark
+} */
+/*# sourceMappingURL=01-start.css.map */

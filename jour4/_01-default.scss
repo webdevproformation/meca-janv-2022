@@ -1,0 +1,20 @@
+// !default; 
+// !important; => la règle est prioritaire 
+// MAIS pas du tout 
+
+
+// !default; SASS pas utilisable en css 
+// à utiliser QUand on crée des variables 
+
+$largeur : 12px !default; // largeur avec default
+$primary : #F3C5C5 ;    // primary sans default 
+
+
+h1{
+    width: $largeur;
+    background: $primary;
+}
+
+
+
+

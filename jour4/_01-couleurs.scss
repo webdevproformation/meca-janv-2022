@@ -1,0 +1,31 @@
+$adobe-choice : #DB5D44 !default; 
+
+// nuancier de la couleur $adobe-choice
+// https://sass-lang.com/documentation/modules/color
+
+// darken(#000, 10%) // assombrir
+// lighten(#000, 10%) // éclaircir
+
+button{
+    background: $adobe-choice;
+    &:hover{
+        background: lighten($adobe-choice , 20%) ;
+    }
+    &:focus{
+        background: darken($adobe-choice , 20%) ;
+    }
+}
+
+// design système 
+
+@for $i from 1 through 5{
+    .text-meca-light-#{$i}{
+        color : lighten($adobe-choice , $i * 10 );
+    }
+    .text-meca-dark-#{$i}{
+        color : darken($adobe-choice , $i * 10 );
+    }
+};
+
+
+
