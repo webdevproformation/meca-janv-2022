@@ -1,0 +1,91 @@
+
+.container{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    gap:10px;
+}
+img{
+    max-width: 100%;
+}
+
+@for $i from 1 through 10{
+    .article#{$i}{
+        opacity: 0;
+        @if($i % 2 == 0){
+            transform: translateY(150px) rotate(180deg);
+        }
+        @else{
+            transform: translateY(-150px) rotate(-180deg);
+        }
+        animation: apparition 0.7s #{ 0.7s * ($i - 1) } cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+}
+@keyframes apparition {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+// 4 / 2 = 2 reste 0
+// 5 / 2 = 2 reste 1
+
+// 5 % 2 = 1
+
+@mixin hinge($duree){
+    animation-duration: calc(#{$duree * 2} );
+    animation-name: hinge;
+    transform-origin: top left;
+    
+    @keyframes hinge {
+        0% {
+          animation-timing-function: ease-in-out;
+        }
+      
+        20%,
+        60% {
+          transform: rotate3d(0, 0, 1, 80deg);
+          animation-timing-function: ease-in-out;
+        }
+      
+        40%,
+        80% {
+          transform: rotate3d(0, 0, 1, 60deg);
+          animation-timing-function: ease-in-out;
+          opacity: 1;
+        }
+      
+        to {
+          transform: translate3d(0, 700px, 0);
+          opacity: 0;
+        }
+      }
+}
+
+h1{
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    @include hinge(2s);
+    animation-fill-mode: forwards;
+    position: relative;
+    z-index: 10;
+}
+
+// créer une nouvelle page 09-exo.html // 09-style.scss 
+/*
+.container 
+    img => 400x200  .img1
+    img => 400x200  .img2
+
+ajoute sur l'image .img1 l'effet => zoomIN
+ajoute sur l'image .img2 l'effet => jackInTheBox
+
+=> 1 en parallèle
+=> 2 bonus séquentiel :
+=> animation 1 exécutée QUAND elle est finie => lance l'animation sur l'image 2
+*/
+
