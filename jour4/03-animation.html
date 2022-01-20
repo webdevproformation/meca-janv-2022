@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1{
+            /* par défaut */
+            background: #3E8E7E;
+            transition:  font-size 2s  cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s; 
+            /*  transition: all 2s ; 
+            transition-property: all ;
+            transition-duration: 2s ;*/
+        }
+        .p1:hover{
+            /* etat suite à une action vert => rouge en une fraction de seconde
+            le passage de couleur 1s */
+            /* background: #FF1700; */
+            font-size: 20px;
+            /* padding:8px 0 */
+            /* transition: background 3s; */
+        }
+        .d2{
+            border:2px solid blue;
+        }
+
+        .p2{
+            transition: transform 1s;
+            border:2px solid red; 
+        }
+        div:hover .p2{ /*parent*/
+            /*transform: rotate(180deg);*/
+            transform: translateX(200px);
+        }
+
+        .p4{
+            transition: transform 1s;
+            transform : rotate(360deg);
+        }
+        .p4.move{ /* PAS d'ESPACE*/
+            transform: translateX(200px) ;
+        }
+        .p4.rotate{ /* PAS d'ESPACE*/
+            transform: translateX(200px) rotate(360deg);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- div*5>button.p$>lorem1 -->
+    <div><button class="p1">Lorem.</button></div>
+    <div class="d2"><button class="p2">Inventore.</button></div>
+    <div><button class="p3">Ipsa.</button></div>
+    <div><button class="p4">Possimus.</button></div>
+    <div><button class="p5">Error?</button></div>
+    <script>
+        function $(el){
+            return document.querySelector(el)
+        }
+
+       /*  $(".p3").addEventListener( "click" , function(){
+            $(".p4").classList.add("move")
+            $(".p4").addEventListener("transitionend" , function(){
+                $(".p4").classList.add("rotate")
+                $(".p4.rotate").addEventListener("transitionend", function(){
+                    console.log("ici")
+                    $(".p4").classList.remove("rotate")
+                    $(".p4").classList.remove("move")
+                })
+            })
+        } ) */
+        
+        function action1( cb ){
+            $(".p3").addEventListener( "click" , function(){
+                $(".p4").classList.add("move")
+                cb();
+            })
+        }
+        function action2(cb){
+            $(".p4").addEventListener("transitionend" , function(){
+                $(".p4").classList.add("rotate")
+                cb()
+            })
+        }
+        function action3(){
+            $(".p4.rotate").addEventListener("transitionend", function(){
+                $(".p4").classList.remove("rotate")
+                $(".p4").classList.remove("move")
+            })
+        }
+
+        action1( function(  ){
+            action2(action3)
+        } )
+      
+
+    </script>
+</body>
+</html>
