@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="06-css.css">
+    <style>
+        .img-1{
+            /*etat initial de la balise*/
+            /* transform:translateX(300px);  */
+            border:2px solid black;
+            
+            /*animation: name duration timing-function delay iteration-count direction fill-mode;
+            
+            name
+            duration
+            timing
+            delay duree en ms s
+            iteration-count nombre de fois que l'on veut exécuter 0 1 2 ... infinity
+            direction le sens de l'animation
+            fill-mode l'état dans lequel on veut laisser la balise à la fin de l'animation;
+            */
+            animation: glisserDroiteGauche 1s forwards;
+            /*animation-fill-mode: ;*/
+        }
+        @keyframes glisserDroiteGauche {
+            from{}
+            to{}
+        }
+        @keyframes glisserDroiteGauche {
+            0%{
+                transform:translateX(300px); 
+            } 
+
+            50%{
+                transform:translateX(150px) scale(1.2);
+            }
+
+            100%{
+                transform:translateX(0px); 
+            }
+        }
+
+        .img-2{
+            animation: deplacement1 1s 0s forwards;
+        }
+        .img-3{
+            animation: deplacement2 1s 1s forwards;
+        }
+        @keyframes deplacement1 {
+            100%{
+                transform:translateX(400px); 
+            }
+        }
+        @keyframes deplacement2 {
+            100%{
+                transform:translateX(600px); 
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://via.placeholder.com/300x200" alt="" class="img-1">
+    </div>
+    <div>
+        <img src="https://via.placeholder.com/300x200" alt="" class="img-2">
+    </div>
+    <div>
+        <img src="https://via.placeholder.com/300x200" alt="" class="img-3">
+    </div>
+    
+    <div>
+        <button>lancer animation img 4</button>
+        <img src="https://via.placeholder.com/300x200" alt="" class="">
+    </div>
+    <div>
+        <img src="https://via.placeholder.com/300x200" alt="" class="img-5">
+    </div>
+    <script>
+        function $(el){
+            return document.querySelector(el);
+        }
+        $("button").addEventListener("click", function(){
+            this.nextElementSibling.classList.add("img-4")
+        })
+    </script>
+</body>
+</html>

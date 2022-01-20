@@ -1,0 +1,15 @@
+@mixin deplacement($id , $duree , $delay : 0s , $translateX : 400px){
+    animation: deplacement#{$id} $duree $delay forwards;
+    @keyframes deplacement#{$id} {
+        100%{
+            transform:translateX($translateX); 
+        }
+    }
+}
+.img-4{
+    @include deplacement(3 , 2s )
+}
+
+.img-5{
+    @include deplacement(4 , 4s , 2s , 800px )
+}
