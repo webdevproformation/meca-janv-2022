@@ -13,3 +13,23 @@
 .img-5{
     @include deplacement(4 , 4s , 2s , 800px )
 }
+
+/*
+/*
+1/ créer un nouveau fichier 07-exo.scss
+2/ créer le fichier 07-exo.html
+
+html :
+  la page va contenir 100 paragraphes de 15 mots fictifs 
+  premier p1  1s  0s
+  deuxième p2 1s  1s
+  deuxième p3 1s  2s
+  ...
+  100ème   p100 1s 99s
+
+sass :
+  faire apparaitre chaque paragraphe depuis la droite l'un après l'autre
+  == faire apparaitre un paragraphe et ajouter un delay pour la paragraphe suivant
+
+  @mixin ET boucle @for
+*/

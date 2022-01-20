@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .img-4 {
   -webkit-animation: deplacement3 2s 0s forwards;
           animation: deplacement3 2s 0s forwards;
@@ -35,4 +36,24 @@
             transform: translateX(800px);
   }
 }
+
+/*
+/*
+1/ créer un nouveau fichier 07-exo.scss
+2/ créer le fichier 07-exo.html
+
+html :
+  la page va contenir 100 paragraphes de 15 mots fictifs 
+  premier p1  1s  0s
+  deuxième p2 1s  1s
+  deuxième p3 1s  2s
+  ...
+  100ème   p100 1s 99s
+
+sass :
+  faire apparaitre chaque paragraphe depuis la droite l'un après l'autre
+  == faire apparaitre un paragraphe et ajouter un delay pour la paragraphe suivant
+
+  @mixin ET boucle @for
+*/
 /*# sourceMappingURL=06-css.css.map */
