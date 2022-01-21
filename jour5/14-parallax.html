@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .container{
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            text-align: justify;
+        }
+        img{
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="titre">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, porro.</h1>
+        <img src="https://via.placeholder.com/1400x200?text=bannier" alt="" class="banniere1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quae minima earum sit, tempora a dolore architecto aliquid atque facere deleniti iste, reprehenderit accusamus quas. Fugiat commodi laborum praesentium nam!</p>
+        <p>Nostrum, magnam? Hic vitae accusantium quaerat perspiciatis cupiditate quam expedita excepturi natus fuga sequi dicta ab saepe a quasi fugit consequuntur molestiae, voluptatem, animi eius. Repellat asperiores aperiam nulla nam!</p>
+        <p>Ea consequuntur cupiditate esse tempore natus doloribus dolor doloremque? Dolorem distinctio minus molestias eos maiores voluptatibus iusto inventore ea harum, error incidunt corrupti alias aut dicta illo excepturi. Nostrum, libero?</p>
+        <p>Perferendis, facere. Error iure facilis voluptatem pariatur quia autem adipisci ad, nulla unde! Saepe dignissimos nulla eius. Dolor iusto adipisci natus, architecto suscipit commodi iure unde eveniet numquam consequatur magnam?</p>
+        <p>Delectus quisquam tenetur ullam qui laborum architecto eum culpa ex animi quidem consequatur voluptatibus, cumque sint possimus beatae provident. Nisi maxime earum minus necessitatibus maiores voluptate illum laboriosam consectetur nemo.</p>
+        <p>Sint reprehenderit voluptas non corporis. Accusantium quam magnam repellendus voluptatum blanditiis, ducimus sint rerum placeat provident, labore velit illo quis nemo adipisci nihil distinctio fugit modi dolor, ipsum error odit.</p>
+        <p>Vero veritatis unde amet, nobis excepturi hic ex corporis nulla tempora aliquam repellendus est sed odio incidunt mollitia libero rerum sapiente alias error inventore debitis ipsam dignissimos, suscipit similique. Quisquam?</p>
+        <p>Sed voluptatibus officiis ipsum iusto quisquam, earum ullam dolores sint vero repellat similique, autem fugiat veritatis error praesentium id alias necessitatibus totam facere. Quam quasi illum autem aut. Sit, nam.</p>
+        <p>Ab perspiciatis adipisci laborum. Praesentium fugit, maxime perspiciatis corrupti sapiente eaque fuga, ipsum soluta repellat, obcaecati perferendis nemo facilis earum! Aut delectus, error accusantium aspernatur in officiis. Accusamus, ipsa autem!</p>
+        <p>A voluptatem voluptas consequatur suscipit ipsam beatae laudantium nulla eum fugiat officiis. Eveniet similique, atque deleniti cum earum ut quasi placeat, nihil, voluptatibus tempore odit a consequatur ducimus maxime. Distinctio!</p>
+        
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, porro.</h1>
+        <img src="https://via.placeholder.com/1400x200?text=bannier" alt="">
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, porro.</h1>
+    </div>
+    <script>
+        const titre = document.querySelector(".titre")
+        const banniere = document.querySelector(".banniere1")
+
+        document.addEventListener("scroll" , function(){
+            const value = window.scrollY;
+            console.log(value);
+            titre.style["top"]= value * 2+"px";
+            titre.style["right"]= value * -1+"px";
+            titre.style["position"]= "relative"
+
+            banniere.style["top"]= value * 1.5+"px";
+            banniere.style["position"]= "relative";
+        })
+    </script>
+</body>
+</html>
