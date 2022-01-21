@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p2{
+            transition : all 1s
+        }
+        .p2.show{
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, expedita.</p>
+    <p class="p2">Praesentium ratione aliquam reiciendis accusantium quidem consectetur, consequuntur vel distinctio?</p>
+    <p class="p3">Necessitatibus aliquam eius blanditiis quo ea. Facere atque voluptates sed?</p>
+    <p class="p4">Reprehenderit libero inventore dolorem ipsa non magni sed quo exercitationem.</p>
+    <div>
+        <p>toto</p>
+        <p class="p5">Eveniet animi architecto
+            <a href="">titre</a> rem maxime commodi magnam molestiae iusto natus.
+            <span>un peu de texte</span>
+        </p>
+        <p>next</p>
+    </div>
+    
+
+    <script>
+        // sélecteur css
+        // .p1{}
+        // p{ }
+
+        // jQuery
+        // $(".p1").css()
+        // $(".p").css()
+
+        // javascript de base 
+        document.querySelector(".p1")
+
+        function $(el){
+            return document.querySelector(el)
+        }
+
+        $(".p1").style["color"] = "red" ; 
+        $(".p1").style["font-size"] = "30px" ; 
+        $(".p1").style["text-decoration"] = "underline" ; 
+        $(".p1").style["opacity"] = 0.5 ; 
+
+        $(".p2").addEventListener("click" , function(){
+            this.style["color"] = "red"; 
+        })
+        $(".p3").addEventListener("click" , function(){
+            $(".p4").style["color"] = "purple"; 
+        })
+
+        $(".p5").addEventListener("click" , function(){
+            $(".p5 span").style["color"] = "purple"; 
+            this.closest("div").style["border"] = "2px solid green"; 
+            console.log(this);
+            this.previousElementSibling.style["border"] = "2px solid pink"; 
+            this.nextElementSibling.style["border"] = "2px solid purple"; 
+        })
+
+        $(".p3").addEventListener("click" , function(){
+            this.previousElementSibling.classList.toggle("show") 
+        })
+
+    </script>
+</body>
+</html>
+<!--
+    créer une page 10-exo.html
+
+    img
+    p qui contient 5 mots
+    
+    en js si tu cliques sur l'image une premier fois tu fais apparaitre le p qui suit l'image avec opacité de 0 => 1 en 1 seconde
+     en js si tu cliques sur l'image une premier fois tu fais disparaitre le p qui suit l'image avec opacité de 1 => 0 en 1 secondes
+-->
