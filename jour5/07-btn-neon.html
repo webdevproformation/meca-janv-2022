@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .neon{
+            width: fit-content;
+            height:fit-content;
+            padding: 20px;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 4rem;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            transition: all 1s 1s;
+        }
+        .neon:hover{
+            background: #2196f3;
+            box-shadow: 0 0 10px #2196f3, 
+                    0 0 40px #2196f3,
+                    0 0 80px #2196f3,
+                    0 0 120px #2196f3;
+        }
+
+        .neon__top{
+            display: block;
+            height: 5px;
+            width:100%;
+            position: absolute;
+            top:0;
+            left:-100%;
+            background: linear-gradient(90deg,transparent, #2196f3);
+            transition: left 0.3s;
+        }
+        .neon:hover .neon__top{
+            left:100%;
+        }
+
+        .neon__right{
+            display: block;
+            height: 100%;
+            width:5px;
+            position: absolute;
+            top:-100%;
+            right:0;
+            background: linear-gradient(180deg,transparent, #2196f3);
+            transition: top 0.3s 0.3s;
+        }
+
+        .neon:hover .neon__right{
+            top:100%;
+        }
+
+        .neon__bottom{
+            display: block;
+            height: 5px;
+            width:100%;
+            position: absolute;
+            right:-100%;
+            bottom:0;
+            background: linear-gradient(-90deg,transparent, #2196f3);
+            transition: right 0.3s 0.6s;
+        }
+        .neon:hover .neon__bottom{
+            right:100%;
+        }
+
+        .neon__left{
+            display: block;
+            height: 100%;
+            width:5px;
+            position: absolute;
+            bottom:-100%;
+            left:0;
+            background: linear-gradient(0deg,transparent, #2196f3);
+            transition: bottom 0.3s 0.6s;
+        }
+
+        .neon:hover .neon__left{
+            bottom:100%;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#" class="neon">
+        <span class="neon__top"></span>
+        <span class="neon__right"></span>
+        <span class="neon__bottom"></span>
+        <span class="neon__left"></span>
+        un super lien
+    </a>
+</body>
+</html>
