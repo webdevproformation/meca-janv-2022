@@ -1,0 +1,31 @@
+.box{
+    position: relative;
+    border:1px solid black;
+    width:150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.spinner{
+    width:100px;
+    height:100px;
+    border: 5px solid transparent;
+    border-top-color: #fae7cb;
+    border-bottom-color: #fae7cb;
+    border-radius: 50%;
+    animation: tourne 3s cubic-bezier(.61,-0.53,.45,1.67) infinite;
+}
+
+@keyframes tourne {
+
+    50%{
+        transform:rotate(180deg) scale(1.2);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+

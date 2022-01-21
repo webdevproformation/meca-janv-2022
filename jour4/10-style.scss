@@ -1,0 +1,100 @@
+.container{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+body{
+    font-family: sans-serif;
+}
+$primary : #632626;
+$secondary : #BF8B67;
+
+/* premier exemple*/
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:2px solid $primary;
+    background: $secondary;
+    padding: 10px;
+    border-radius: 100px;
+    width: fit-content;
+    
+    
+    &__input , &__btn{
+        background: $secondary ;
+        border:0;
+        outline: none;
+        cursor: pointer;
+    }
+    &__btn{
+        padding: 0;
+        position: relative;
+        left:-2px;
+    }
+    &__input{
+        border-radius: 5px;
+        width: 0;
+        transition: width 1s , background 2s;
+    }
+}
+
+.form:hover .form__input{
+    width:150px;
+    background: lighten($secondary , 10);
+    margin-right: 10px;
+}
+
+/*----------------------------------------*/
+
+.onde{
+    position: relative;
+    margin: 0;
+
+    &__1{
+        position: absolute;
+        top: 20px ;
+        left : 100px;
+        background: rgba($secondary , 0.4 );
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation : onde 1s linear infinite;
+    }
+    &__2{
+       /*  position: absolute;
+        top: 40px ;
+        left : 120px; */
+        background: rgba(blue , 0.4 );
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: block;
+        animation : onde2 2.5s linear infinite;
+    }
+}
+@keyframes onde {
+    0%, 70%{
+        box-shadow: 0px 0px 0 0px #084177 ;
+    }
+    to{
+        box-shadow: 0px 0px 0px 30px rgba(#084177, 0.1) ;
+    }
+}
+@keyframes onde2 {
+    0%, 70%{
+        box-shadow: 0px 0px 0 0px red ;
+    }
+    to{
+        box-shadow: 0px 0px 0px 30px rgba(red, 0.1) ;
+    }
+}
+p{
+    color :red;
+}
+p{
+    color :blue; 
+}
+
+
