@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+        
+        /* $shadow: 0px 0px #000;
+
+        @for $i from 1 through 30 {
+            $shadow: $shadow, #{-1 * $i * 1px} #{$i * 1px} #000;
+        } */
+        p{
+            font-size: 15rem;
+            font-weight: bold;
+            transform: rotate(-30deg) skew(28deg);
+            text-shadow:    0 1px red ,
+                            -1px 2px red,
+                            -2px 3px red,
+                            -3px 4px red,
+                            -4px 5px red,
+                            -5px 6px red,
+                            -6px 7px red;
+        }
+    </style>
+</head>
+<body>
+    <p data-text="3D ISO">3D ISO</p>
+</body>
+</html>
